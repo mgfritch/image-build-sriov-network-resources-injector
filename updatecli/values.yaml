@@ -4,5 +4,5 @@ github:
   username: "UPDATECLI_GITHUB_ACTOR"
   token: "UPDATECLI_GITHUB_TOKEN"
   repository: "image-build-sriov-network-resources-injector"
-  branch: "main"
-  owner: "rancher"
+  branch: "updatecli"
+  owner: "mgfritch"

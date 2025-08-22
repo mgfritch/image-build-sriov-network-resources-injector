@@ -1,5 +1,5 @@
 ARG BCI_IMAGE=registry.suse.com/bci/bci-base
-ARG GO_IMAGE=rancher/hardened-build-base:v1.21.11b3
+ARG GO_IMAGE=rancher/hardened-build-base:v1.24.5b1
 
 # Image that provides cross compilation tooling.
 FROM --platform=$BUILDPLATFORM rancher/mirrored-tonistiigi-xx:1.6.1 AS xx
@@ -15,7 +15,7 @@ RUN set -x && \
 # Build the project
 FROM base-builder AS builder
 #RUN apk add --update --virtual build-dependencies build-base linux-headers bash
-ARG TAG=v1.7.1
+ARG TAG=v1.8.0
 ARG SRC="github.com/k8snetworkplumbingwg"
 ARG REPO_PATH="${SRC}/network-resources-injector"
 RUN git clone --depth=1 https://github.com/k8snetworkplumbingwg/network-resources-injector
